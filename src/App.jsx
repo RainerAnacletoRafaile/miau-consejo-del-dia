@@ -12,6 +12,13 @@ export default function App() {
   const [page, setPage] = useState('home');
   const [selection, setSelection] = useState(() => getDailySelection());
 
+  function openMyDay() {
+    // Actualiza la fecha y el consejo cada vez que se abre el módulo.
+    // Así, si cambió el día mientras la web seguía abierta, se desbloquea la elección.
+    setSelection(getDailySelection());
+    setPage('day');
+  }
+
   function chooseMood(mood) {
     // Una sola emoción y un solo consejo por día.
     if (selection) return;
@@ -25,7 +32,7 @@ export default function App() {
   return (
     <div className="app-shell">
       {page === 'home' ? (
-        <Home onStart={() => setPage('day')} />
+        <Home onStart={openMyDay} />
       ) : (
         <MyDay
           selection={selection}
