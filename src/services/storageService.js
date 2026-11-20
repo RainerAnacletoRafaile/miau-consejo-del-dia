@@ -18,7 +18,9 @@ function readStore() {
 
 export function getDailySelection() {
   const saved = readStore();
-  return saved.date === getTodayKey() ? saved : null;
+  return saved.date === getTodayKey() && saved.moodId && saved.advice
+    ? saved
+    : null;
 }
 
 export function getUsedAdvices(moodId) {
@@ -43,6 +45,14 @@ export function saveDailySelection(selection) {
 
   localStorage.setItem(STORAGE_KEY, JSON.stringify(record));
   return record;
+}
+
+export function clearDailySelection() {
+  const previous = readStore();
+  const record = { ...previous, date: getTodayKey() };
+  delete record.moodId;
+  delete record.advice;
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(record));
 }
 
 export function todayLabel() {
