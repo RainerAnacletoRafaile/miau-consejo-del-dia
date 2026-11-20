@@ -6,6 +6,7 @@ import {
   getDailySelection,
   getUsedAdvices,
   saveDailySelection,
+  clearDailySelection,
 } from './services/storageService.js';
 
 export default function App() {
@@ -17,6 +18,11 @@ export default function App() {
     // Así, si cambió el día mientras la web seguía abierta, se desbloquea la elección.
     setSelection(getDailySelection());
     setPage('day');
+  }
+
+  function clearSelection() {
+    clearDailySelection();
+    setSelection(null);
   }
 
   function chooseMood(mood) {
@@ -37,6 +43,7 @@ export default function App() {
         <MyDay
           selection={selection}
           onChoose={chooseMood}
+          onClear={clearSelection}
           onBack={() => setPage('home')}
         />
       )}
