@@ -2,16 +2,22 @@ import { useState } from 'react';
 import Home from './pages/Home.jsx';
 import MyDay from './pages/MyDay.jsx';
 import { createDailyAdvice } from './services/adviceService.js';
-import { getDailySelection, saveDailySelection } from './services/storageService.js';
+import {
+  getDailySelection,
+  getUsedAdvices,
+  saveDailySelection,
+} from './services/storageService.js';
 
 export default function App() {
   const [page, setPage] = useState('home');
   const [selection, setSelection] = useState(() => getDailySelection());
 
   function chooseMood(mood) {
-    // Si ya eligió hoy, no permitimos cambiar ni regenerar el consejo.
+    // Una sola emoción y un solo consejo por día.
     if (selection) return;
-    const advice = createDailyAdvice(mood.id);
+
+    const usedAdvices = getUsedAdvices(mood.id);
+    const advice = createDailyAdvice(mood.id, usedAdvices);
     const saved = saveDailySelection({ moodId: mood.id, advice });
     setSelection(saved);
   }
