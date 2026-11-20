@@ -8,17 +8,39 @@ function getTodayKey() {
   return `${year}-${month}-${day}`;
 }
 
-export function getDailySelection() {
+function readStore() {
   try {
-    const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null');
-    return saved?.date === getTodayKey() ? saved : null;
+    return JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null') || {};
   } catch {
-    return null;
+    return {};
   }
 }
 
+export function getDailySelection() {
+  const saved = readStore();
+  return saved.date === getTodayKey() ? saved : null;
+}
+
+export function getUsedAdvices(moodId) {
+  const saved = readStore();
+  return saved.usedAdvices?.[moodId] || [];
+}
+
 export function saveDailySelection(selection) {
-  const record = { ...selection, date: getTodayKey() };
+  const previous = readStore();
+  const usedAdvices = previous.usedAdvices || {};
+  const moodHistory = usedAdvices[selection.moodId] || [];
+
+  const record = {
+    ...previous,
+    ...selection,
+    date: getTodayKey(),
+    usedAdvices: {
+      ...usedAdvices,
+      [selection.moodId]: [...moodHistory, selection.advice],
+    },
+  };
+
   localStorage.setItem(STORAGE_KEY, JSON.stringify(record));
   return record;
 }
