@@ -14,7 +14,7 @@ export default function MyDay({ selection, onChoose, onBack }) {
       <p className="date-label">{todayLabel()}</p>
 
       {!selection ? (
-        <>
+        <section className="mood-entry">
           <h2 className="question">¿Cómo te sientes hoy?</h2>
           <p className="supporting-copy">Elige la emoción que más se parece a ti.</p>
           <div className="mood-grid">
@@ -25,13 +25,17 @@ export default function MyDay({ selection, onChoose, onBack }) {
               </button>
             ))}
           </div>
-        </>
+        </section>
       ) : (
         <div className="result-content">
+          <div className="already-picked">
+            <span className="already-picked-icon" aria-hidden="true">♡</span>
+            <p>Tu michi ya tiene un consejito preparado para ti hoy.</p>
+          </div>
           <p className="selected-label">Hoy te sientes: <strong>{selectedMood.label}</strong></p>
           <CatMascot mood={selectedMood} />
           <AdviceCard advice={selection.advice} mood={selectedMood} />
-          <p className="daily-lock">Este es tu consejo de hoy. Vuelve mañana por uno nuevo. ♡</p>
+          <p className="daily-lock">Guarda este mensajito en tu corazón. Mañana tendremos uno nuevo. ♡</p>
           <button className="secondary-button" onClick={onBack}>Volver al inicio</button>
         </div>
       )}
