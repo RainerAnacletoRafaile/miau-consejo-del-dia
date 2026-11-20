@@ -3,7 +3,7 @@ import CatMascot from '../components/CatMascot.jsx';
 import AdviceCard from '../components/AdviceCard.jsx';
 import { todayLabel } from '../services/storageService.js';
 
-export default function MyDay({ selection, onChoose, onBack }) {
+export default function MyDay({ selection, onChoose, onClear, onBack }) {
   const selectedMood = moods.find((mood) => mood.id === selection?.moodId);
 
   return (
@@ -36,7 +36,8 @@ export default function MyDay({ selection, onChoose, onBack }) {
           <CatMascot mood={selectedMood} />
           <AdviceCard advice={selection.advice} mood={selectedMood} />
           <p className="daily-lock">Guarda este mensajito en tu corazón. Mañana tendremos uno nuevo. ♡</p>
-          <button className="secondary-button" onClick={onBack}>Volver al inicio</button>
+          <button className="secondary-button" onClick={onClear}>Limpiar selección</button>
+          <button className="back-link" onClick={onBack}>Volver al inicio</button>
         </div>
       )}
     </main>
