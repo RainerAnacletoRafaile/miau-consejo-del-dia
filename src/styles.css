@@ -25,29 +25,42 @@ h1 span { color: #c05c9a; }
 .welcome-note, .advice-card { width: 100%; padding: 22px; border: 1px solid #eadde9; border-radius: 22px; background: #fff; }
 .welcome-note h2 { margin: 0 0 8px; color: #a94e88; font-size: 1.5rem; }
 .welcome-note p { margin: 0; line-height: 1.55; color: #5f5664; }
-.primary-button, .secondary-button { width: 100%; min-height: 54px; border: 0; border-radius: 999px; font-weight: 800; margin-top: 18px; }
+.primary-button, .secondary-button { width: 100%; min-height: 54px; border: 0; border-radius: 999px; font-weight: 800; margin-top: 18px; transition: transform .2s ease, box-shadow .2s ease; }
 .primary-button { background: #c85e9d; color: white; font-size: 1.08rem; }
 .primary-button span { margin-left: 8px; }
+.primary-button:hover, .secondary-button:hover { transform: translateY(-2px); box-shadow: 0 8px 18px #6c45621c; }
 .back-link { align-self: flex-start; padding: 8px 0; border: 0; background: transparent; color: #8d6387; font-weight: 700; }
 .day-screen h1 { margin-top: 18px; }
 .date-label { color: #8b818e; text-transform: capitalize; font-size: .9rem; margin: 0 0 30px; }
 .question { font-size: 1.35rem; margin: 0 0 8px; }
+.mood-entry { width: 100%; animation: softAppear .45s ease both; }
 .mood-grid { width: 100%; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 18px; }
-.mood-option { min-height: 108px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; border: 1px solid #eadde9; border-radius: 18px; background: white; color: #514657; font-weight: 750; }
+.mood-option { min-height: 108px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; border: 1px solid #eadde9; border-radius: 18px; background: white; color: #514657; font-weight: 750; transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease; }
 .mood-option:last-child { grid-column: 1 / -1; }
+.mood-option:hover { transform: translateY(-3px); border-color: #dba5c8; box-shadow: 0 9px 20px #8c5b8215; }
+.mood-option:active { transform: scale(.97); }
 .mood-option:focus-visible, button:focus-visible { outline: 3px solid #d68bb8; outline-offset: 3px; }
 .mood-emoji { font-size: 2rem; }
-.result-content { width: 100%; display: flex; flex-direction: column; align-items: center; }
+.result-content { width: 100%; display: flex; flex-direction: column; align-items: center; animation: softAppear .55s ease both; }
+.already-picked { width: 100%; display: flex; align-items: center; justify-content: center; gap: 10px; padding: 12px 15px; margin: 0 0 18px; border-radius: 16px; background: #fff0f7; color: #8e4f79; animation: softAppear .6s ease both; }
+.already-picked p { margin: 0; font-size: .88rem; line-height: 1.45; }
+.already-picked-icon { font-size: 1.5rem; color: #d56da8; }
 .selected-label { color: #756a79; margin: 0 0 16px; }
 .selected-label strong { color: #b04e8d; }
-.result-content .mascot-placeholder { min-height: 150px; margin-bottom: 16px; }
+.result-content .mascot-placeholder { min-height: 150px; margin-bottom: 16px; animation: kittyPop .65s cubic-bezier(.2,.8,.2,1) both; }
 .result-content .mascot-emoji { font-size: 4rem; }
-.advice-card { text-align: left; }
+.advice-card { text-align: left; animation: cardReveal .7s .12s ease both; }
 .advice-card h2 { font-size: 1.25rem; margin: 6px 0 12px; }
 .advice-text { font-size: 1.05rem; line-height: 1.7; margin: 0; color: #504655; }
 .daily-lock { font-size: .82rem; color: #8b818e; line-height: 1.5; }
 .secondary-button { background: #eee8f0; color: #594b60; }
 .site-footer { color: #a398a6; font-size: .75rem; padding: 22px 0 4px; }
+@keyframes softAppear { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes kittyPop { 0% { opacity: 0; transform: translateY(12px) scale(.88); } 65% { opacity: 1; transform: translateY(-3px) scale(1.035); } 100% { opacity: 1; transform: translateY(0) scale(1); } }
+@keyframes cardReveal { from { opacity: 0; transform: translateY(16px) scale(.98); } to { opacity: 1; transform: translateY(0) scale(1); } }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
 @media (min-width: 600px) {
   .app-shell { padding-top: 40px; }
   .screen { padding: 20px 0; }
