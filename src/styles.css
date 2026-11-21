@@ -66,3 +66,15 @@ h1 span { color: #c05c9a; }
   .screen { padding: 20px 0; }
   .mascot-placeholder { min-height: 220px; }
 }
+
+/* Fondo visual MIAU */
+.app-shell {
+  background-color: #28163d;
+  background-image:
+    linear-gradient(rgba(35, 17, 54, .16), rgba(35, 17, 54, .16)),
+    url('/images/fondo/fondoMoradito.png');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
