@@ -8,16 +8,19 @@ export default function Home({ onStart }) {
       />
       <p className="intro">Un pequeño mensaje para acompañarte, según cómo te sientas hoy.</p>
       <div className="home-mascot">
-        <div className="mascot-placeholder">
-          <span className="mascot-emoji">🐱</span>
-          <span className="mascot-caption">Aquí estará tu michi</span>
-        </div>
+        <img
+          className="home-kitty"
+          src="/images/gatitos/inicio.png"
+          alt="Gatita MIAU abrazando un corazón"
+        />
       </div>
       <div className="welcome-note">
-        <h2>¡Holaaa!</h2>
+        <h2>¡Holaaa! <span aria-hidden="true">♡</span></h2>
         <p>Soy tu michi y estoy aquí para darte un consejo especial cada día.</p>
       </div>
-      <button className="primary-button" onClick={onStart}>Mi día <span aria-hidden="true">→</span></button>
+      <button className="primary-button" onClick={onStart}>
+        Mi Día <span aria-hidden="true">→</span>
+      </button>
     </main>
   );
 }
