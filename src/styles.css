@@ -23,7 +23,13 @@ h1 span { color: #c05c9a; }
 .mascot-placeholder { min-height: 190px; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; border: 1px dashed #d8cbdc; border-radius: 24px; background: #fff; color: #9a849e; }
 .mascot-emoji { font-size: 5rem; line-height: 1.2; }
 .mascot-caption { font-size: .8rem; }
-.welcome-note, .advice-card { width: 100%; padding: 22px; border: 1px solid rgba(255, 218, 244, .9); border-radius: 28px; background: rgba(255, 239, 249, .94); box-shadow: 0 8px 24px rgba(54, 17, 66, .16); }
+.welcome-note, .advice-card { width: 100%; padding: 22px 38px; border: 1.5px solid rgba(255, 190, 225, .95); border-radius: 30px; background: rgba(255, 239, 249, .95); box-shadow: 0 8px 24px rgba(54, 17, 66, .16), inset 0 0 0 4px rgba(255,255,255,.48); }
+.welcome-note { position: relative; overflow: hidden; }
+.welcome-note::before, .welcome-note::after { position: absolute; color: #ef75b4; font-size: 1.45rem; line-height: 1; opacity: .9; pointer-events: none; }
+.welcome-note::before { content: "🐾"; left: 17px; top: 17px; transform: rotate(-18deg); }
+.welcome-note::after { content: "🐾"; right: 16px; bottom: 15px; transform: rotate(18deg); }
+.welcome-note h2, .welcome-note p { position: relative; z-index: 1; }
+.welcome-note h2 { font-size: 1.55rem; }
 .welcome-note h2 { margin: 0 0 8px; color: #a94e88; font-size: 1.5rem; }
 .welcome-note h2 span { color: #ed69ac; }
 .welcome-note p { margin: 0; line-height: 1.55; color: #5f5664; }
