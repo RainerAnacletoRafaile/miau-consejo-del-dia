@@ -75,18 +75,32 @@ h1 span { color: #c05c9a; }
   .mascot-placeholder { min-height: 220px; }
 }
 
-/* Fondo visual MIAU */
-.app-shell {
+/* Fondo visual MIAU: capa fija para evitar que se desplace al hacer scroll,
+   especialmente en navegadores móviles. */
+body {
+  min-height: 100%;
+  background: #28163d;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
   background-color: #28163d;
   background-image:
     linear-gradient(rgba(35, 17, 54, .16), rgba(35, 17, 54, .16)),
     url('/images/fondo/fondoMoradito.png');
   background-size: cover;
-  background-position: center top;
+  background-position: center center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 
+.app-shell {
+  position: relative;
+  background: transparent;
+}
 
 /* Gatitos animados según la emoción seleccionada */
 .cat-mascot {
