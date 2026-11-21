@@ -9,6 +9,11 @@ export default function MyDay({ selection, onChoose, onClear, onBack }) {
   return (
     <main className="screen day-screen">
       <button className="back-link" onClick={onBack}>← Volver al inicio</button>
+      <img
+        className="miau-logo"
+        src="/images/logo/logo-miau.png"
+        alt="MIAU - Consejo del Día"
+      />
       <p className="eyebrow">MIAU CONSEJO DEL DÍA</p>
       <h1>Mi día <span>♡</span></h1>
       <p className="date-label">{todayLabel()}</p>
