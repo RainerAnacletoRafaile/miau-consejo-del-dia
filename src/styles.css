@@ -86,7 +86,7 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  z-index: -1;
+  z-index: 0;
   pointer-events: none;
   background-color: #28163d;
   background-image:
@@ -99,6 +99,7 @@ body::before {
 
 .app-shell {
   position: relative;
+  z-index: 1;
   background: transparent;
 }
 
