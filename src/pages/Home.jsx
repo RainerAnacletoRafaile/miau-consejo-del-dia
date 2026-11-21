@@ -1,9 +1,11 @@
 export default function Home({ onStart }) {
   return (
     <main className="screen home-screen">
-      <div className="brand-mark" aria-hidden="true">🐾</div>
-      <p className="eyebrow">UN PEQUEÑO ESPACIO PARA TI</p>
-      <h1>MIAU<br /><span>Consejo del Día</span></h1>
+      <img
+        className="miau-logo"
+        src="/images/logo/logo-miau.png"
+        alt="MIAU - Consejo del Día"
+      />
       <p className="intro">Un pequeño mensaje para acompañarte, según cómo te sientas hoy.</p>
       <div className="home-mascot">
         <div className="mascot-placeholder">
