@@ -17,16 +17,18 @@ button { font: inherit; cursor: pointer; }
 .eyebrow { color: #9a7292; font-size: .72rem; font-weight: 800; letter-spacing: .16em; margin: 8px 0; }
 h1 { font-size: clamp(2.35rem, 10vw, 3.4rem); line-height: 1.02; margin: 8px 0 12px; letter-spacing: -.055em; }
 h1 span { color: #c05c9a; }
-.intro, .supporting-copy { max-width: 330px; color: #fff4ff; line-height: 1.6; margin: 0 auto 18px; text-shadow: 0 2px 8px rgba(30, 8, 43, .72); }
-.home-mascot { width: 100%; margin: 8px 0 16px; }
+.intro, .supporting-copy { max-width: 330px; color: #fff4ff; line-height: 1.6; margin: 0 auto 8px; text-shadow: 0 2px 8px rgba(30, 8, 43, .72); }
+.home-mascot { width: 100%; display: flex; justify-content: center; align-items: center; margin: 0 auto 8px; }
+.home-kitty { display: block; width: min(88%, 330px); max-height: 340px; height: auto; object-fit: contain; filter: drop-shadow(0 10px 16px rgba(39, 13, 49, .22)); animation: kittyPop .75s cubic-bezier(.2,.8,.2,1) both; }
 .mascot-placeholder { min-height: 190px; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; border: 1px dashed #d8cbdc; border-radius: 24px; background: #fff; color: #9a849e; }
 .mascot-emoji { font-size: 5rem; line-height: 1.2; }
 .mascot-caption { font-size: .8rem; }
-.welcome-note, .advice-card { width: 100%; padding: 22px; border: 1px solid #eadde9; border-radius: 22px; background: #fff; }
+.welcome-note, .advice-card { width: 100%; padding: 22px; border: 1px solid rgba(255, 218, 244, .9); border-radius: 28px; background: rgba(255, 239, 249, .94); box-shadow: 0 8px 24px rgba(54, 17, 66, .16); }
 .welcome-note h2 { margin: 0 0 8px; color: #a94e88; font-size: 1.5rem; }
+.welcome-note h2 span { color: #ed69ac; }
 .welcome-note p { margin: 0; line-height: 1.55; color: #5f5664; }
 .primary-button, .secondary-button { width: 100%; min-height: 54px; border: 0; border-radius: 999px; font-weight: 800; margin-top: 18px; transition: transform .2s ease, box-shadow .2s ease; }
-.primary-button { background: #c85e9d; color: white; font-size: 1.08rem; }
+.primary-button { background: linear-gradient(180deg, #ff83c5 0%, #ed3f99 100%); color: white; font-size: 1.18rem; letter-spacing: .02em; border: 2px solid rgba(255,255,255,.9); box-shadow: 0 0 0 3px rgba(255, 115, 190, .28), 0 7px 22px rgba(231, 52, 145, .42), inset 0 2px 4px rgba(255,255,255,.55); text-shadow: 0 1px 3px rgba(116, 25, 81, .28); }
 .primary-button span { margin-left: 8px; }
 .primary-button:hover, .secondary-button:hover { transform: translateY(-2px); box-shadow: 0 8px 18px #6c45621c; }
 .back-link { align-self: flex-start; padding: 8px 0; border: 0; background: transparent; color: #8d6387; font-weight: 700; }
