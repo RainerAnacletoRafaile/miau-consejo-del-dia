@@ -37,7 +37,7 @@ h1 span { color: #c05c9a; }
 .primary-button { background: linear-gradient(180deg, #ff83c5 0%, #ed3f99 100%); color: white; font-size: 1.18rem; letter-spacing: .02em; border: 2px solid rgba(255,255,255,.9); box-shadow: 0 0 0 3px rgba(255, 115, 190, .28), 0 7px 22px rgba(231, 52, 145, .42), inset 0 2px 4px rgba(255,255,255,.55); text-shadow: 0 1px 3px rgba(116, 25, 81, .28); }
 .primary-button span { margin-left: 8px; }
 .primary-button:hover, .secondary-button:hover { transform: translateY(-2px); box-shadow: 0 8px 18px #6c45621c; }
-.back-link { align-self: flex-start; padding: 8px 0; border: 0; background: transparent; color: #8d6387; font-weight: 700; }
+.back-link { align-self: flex-start; display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 10px 17px; margin: 4px 0 14px; border: 1.5px solid rgba(255,255,255,.95); border-radius: 999px; background: rgba(255,255,255,.94); color: #75466f; font-weight: 800; box-shadow: 0 5px 16px rgba(35, 17, 54, .22), inset 0 1px 0 rgba(255,255,255,.9); transition: transform .2s ease, box-shadow .2s ease, background .2s ease; }\n.back-link:hover { transform: translateY(-2px); background: #fff; box-shadow: 0 8px 20px rgba(35, 17, 54, .3); }\n.back-link:active { transform: scale(.97); }
 .day-screen h1 { margin-top: 18px; }
 .date-label { color: #8b818e; text-transform: capitalize; font-size: .9rem; margin: 0 0 30px; }
 .question { font-size: 1.35rem; margin: 0 0 8px; }
