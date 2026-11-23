@@ -8,7 +8,7 @@ export const moods = [
 
 const adviceParts = {
   feliz: {
-    starts: ['Pss, pss...', 'Oye, personita bonita:', 'Miau, miau...', 'Un mensajito para ti:', 'Holiii, michi:', 'Escucha esto:', 'Tu michi te recuerda:', 'Hey, corazón:', 'Pss, pequeña alegría...', 'Con cariño, MIAU:'],
+    starts: ['Pss, pss...', 'Oye, personita bonita:', 'Miau, miau...', 'Un mensajito para ti:', 'Holiii, persona bonita:', 'Escucha esto:', 'Tu michi te recuerda:', 'Oye, persona bonita:', 'Pss, persona bonita...', 'Con cariño, MIAU:'],
     middles: [
       'Disfruta esa sonrisa; hoy también merece ser un día especial.',
       'Guarda este momento bonito en tu corazoncito.',
@@ -24,7 +24,7 @@ const adviceParts = {
     ends: ['🌷', '💗', '✨', '🐾', '🌼', '😸', '💕', '☀️', '🌈', '🍓'],
   },
   alegre: {
-    starts: ['Pss, pss...', 'Oye, personita bonita:', 'Miau, miau...', 'Un mensajito para ti:', 'Holiii, michi:', 'Escucha esto:', 'Tu michi te recuerda:', 'Hey, corazón:', 'Pss, pequeña alegría...', 'Con cariño, MIAU:'],
+    starts: ['Pss, pss...', 'Oye, personita bonita:', 'Miau, miau...', 'Un mensajito para ti:', 'Holiii, persona bonita:', 'Escucha esto:', 'Tu michi te recuerda:', 'Oye, persona bonita:', 'Pss, persona bonita...', 'Con cariño, MIAU:'],
     middles: [
       'No necesitas algo extraordinario para tener un día mágico.',
       'Disfruta las cositas pequeñas que hoy te hacen sonreír.',
@@ -40,7 +40,7 @@ const adviceParts = {
     ends: ['🌷', '💗', '✨', '🐾', '🌼', '😸', '💕', '☀️', '🌈', '🥰'],
   },
   triste: {
-    starts: ['Pss, pss...', 'Ven, personita bonita:', 'Miau, corazón...', 'Un abracito para ti:', 'Oye, pequeña:', 'Tu michi te dice:', 'Aquí estoy:', 'Respira un poquito:', 'Con cariño, MIAU:', 'Escúchame, ¿sí?'],
+    starts: ['Pss, pss...', 'Ven, personita bonita:', 'Miau, persona bonita...', 'Un abracito para ti:', 'Oye, persona bonita:', 'Tu michi te dice:', 'Aquí estoy:', 'Respira un poquito:', 'Con cariño, MIAU:', 'Escúchame, ¿sí?'],
     middles: [
       'No tienes que fingir una sonrisa si hoy no te nace.',
       'Está bien ir despacito; no tienes que poder con todo.',
@@ -56,7 +56,7 @@ const adviceParts = {
     ends: ['🥺💗', '🌷', '🐾', '💕', '🌙', '🐱', '✨', '☁️', '💗', '🫂'],
   },
   molesta: {
-    starts: ['Pss, pss...', 'Oye, personita bonita:', 'Miau, michi...', 'Un consejito para ti:', 'Respira un poquito:', 'Tu michi te recuerda:', 'Hey, corazón:', 'Pausa de michi:', 'Con cariño, MIAU:', 'Escucha esto:'],
+    starts: ['Pss, pss...', 'Oye, personita bonita:', 'Miau, persona bonita...', 'Un consejito para ti:', 'Respira un poquito:', 'Tu michi te recuerda:', 'Oye, persona bonita:', 'Pausa de michi:', 'Con cariño, MIAU:', 'Escucha esto:'],
     middles: [
       'Respira antes de responder; no todo necesita una reacción inmediata.',
       'Está bien sentir enojo, pero cuida lo que haces con él.',
@@ -72,7 +72,7 @@ const adviceParts = {
     ends: ['💗', '🌷', '🐾', '✨', '💕', '🐱', '🌼', '☁️', '🌙', '😾'],
   },
   tranquila: {
-    starts: ['Pss, pss...', 'Oye, personita bonita:', 'Miau, michi...', 'Un mensajito para ti:', 'Quédate un ratito:', 'Tu michi te recuerda:', 'Hey, corazón:', 'Respira profundo:', 'Con cariño, MIAU:', 'Escucha esto:'],
+    starts: ['Pss, pss...', 'Oye, personita bonita:', 'Miau, persona bonita...', 'Un mensajito para ti:', 'Quédate un ratito:', 'Tu michi te recuerda:', 'Oye, persona bonita:', 'Respira profundo:', 'Con cariño, MIAU:', 'Escucha esto:'],
     middles: [
       'Qué bonito cuando el corazón puede descansar un ratito.',
       'Disfruta este momento; no tienes que correr.',
