@@ -8,7 +8,7 @@ export const moods = [
 
 const adviceParts = {
   feliz: {
-    starts: ['Pss, pss...', 'Oye, personita bonita:', 'Miau, miau...', 'Un mensajito para ti:', 'Holiii, persona bonita:', 'Escucha esto:', 'Tu michi te recuerda:', 'Oye, persona bonita:', 'Pss, persona bonita...', 'Con cariño, MIAU:'],
+    starts: ['Psst, noticia importante:', 'Oye, tú, sí, tú:', '¡Se solicita sonrisa por aquí!', 'Miau-¡buenos días!', 'A ver, estrella del día:', 'Interrumpimos tu día para decirte:', '¡Alerta de buena vibra!', 'Hola, criatura maravillosa:', 'Tu comité de michis informa:', 'Párale bola a esto:'],
     middles: [
       'Disfruta esa sonrisa; hoy también merece ser un día especial.',
       'Guarda este momento bonito en tu corazoncito.',
@@ -24,7 +24,7 @@ const adviceParts = {
     ends: ['🌷', '💗', '✨', '🐾', '🌼', '😸', '💕', '☀️', '🌈', '🍓'],
   },
   alegre: {
-    starts: ['Pss, pss...', 'Oye, personita bonita:', 'Miau, miau...', 'Un mensajito para ti:', 'Holiii, persona bonita:', 'Escucha esto:', 'Tu michi te recuerda:', 'Oye, persona bonita:', 'Pss, persona bonita...', 'Con cariño, MIAU:'],
+    starts: ['Psst, tenemos un anuncio:', 'Oye, persona de buena vibra:', '¡Que alguien llame a la banda!', 'Miau, llegó tu dosis de alegría:', 'A ver, protagonista:', 'Este michi tiene algo que decirte:', '¡Sonríe, que no cuesta nada!', 'Atención, máquina de felicidad:', 'Tu club de fans imaginario te recuerda:', 'Un consejito recién salido del horno:'],
     middles: [
       'No necesitas algo extraordinario para tener un día mágico.',
       'Disfruta las cositas pequeñas que hoy te hacen sonreír.',
@@ -40,7 +40,7 @@ const adviceParts = {
     ends: ['🌷', '💗', '✨', '🐾', '🌼', '😸', '💕', '☀️', '🌈', '🥰'],
   },
   triste: {
-    starts: ['Pss, pss...', 'Ven, personita bonita:', 'Miau, persona bonita...', 'Un abracito para ti:', 'Oye, persona bonita:', 'Tu michi te dice:', 'Aquí estoy:', 'Respira un poquito:', 'Con cariño, MIAU:', 'Escúchame, ¿sí?'],
+    starts: ['Ven, vamos pasito a pasito:', 'Oye, aquí no hay que fingir nada:', 'Psst, te mando un abrazo en versión michi:', 'Hoy toca tratarte con paciencia:', 'Respiremos juntos un ratito:', 'No tienes que hacerte el fuerte aquí:', 'Este michi se queda un ratito contigo:', 'Ey, hoy también mereces ternura:', 'Un recordatorio suavecito para ti:', 'Vamos con calma, ¿sí?'],
     middles: [
       'No tienes que fingir una sonrisa si hoy no te nace.',
       'Está bien ir despacito; no tienes que poder con todo.',
@@ -56,7 +56,7 @@ const adviceParts = {
     ends: ['🥺💗', '🌷', '🐾', '💕', '🌙', '🐱', '✨', '☁️', '💗', '🫂'],
   },
   molesta: {
-    starts: ['Pss, pss...', 'Oye, personita bonita:', 'Miau, persona bonita...', 'Un consejito para ti:', 'Respira un poquito:', 'Tu michi te recuerda:', 'Oye, persona bonita:', 'Pausa de michi:', 'Con cariño, MIAU:', 'Escucha esto:'],
+    starts: ['Pausa técnica, por favor:', 'Psst, antes de declarar la guerra...', 'Respira, que todavía no somos un volcán:', 'Oye, jefa/jefe de las emociones:', 'Alto ahí, michi consejero al habla:', 'Un segundo, que tu paz está llamando:', 'Antes de responder en modo explosivo:', 'Activando modo calma...', 'Este michi recomienda contar hasta diez:', 'A ver, vamos a bajarle dos rayitas:'],
     middles: [
       'Respira antes de responder; no todo necesita una reacción inmediata.',
       'Está bien sentir enojo, pero cuida lo que haces con él.',
@@ -72,7 +72,7 @@ const adviceParts = {
     ends: ['💗', '🌷', '🐾', '✨', '💕', '🐱', '🌼', '☁️', '🌙', '😾'],
   },
   tranquila: {
-    starts: ['Pss, pss...', 'Oye, personita bonita:', 'Miau, persona bonita...', 'Un mensajito para ti:', 'Quédate un ratito:', 'Tu michi te recuerda:', 'Oye, persona bonita:', 'Respira profundo:', 'Con cariño, MIAU:', 'Escucha esto:'],
+    starts: ['Psst, no interrumpimos tu paz por mucho:', 'Oye, experta/o en estar en calma:', 'Este michi trae un recordatorio:', 'Modo tranquilidad: activado.', 'A ver, disfruta tu ratito:', 'Comunicado oficial del departamento de descanso:', 'Hoy no hay carrera, respira:', 'Tu pausa del día ha llegado:', 'Un mensajito sin apuro:', 'Shhh... quédate un ratito aquí:'],
     middles: [
       'Qué bonito cuando el corazón puede descansar un ratito.',
       'Disfruta este momento; no tienes que correr.',
