@@ -16,6 +16,19 @@ function readStore() {
   }
 }
 
+// Convierte también el historial antiguo (separado por emoción)
+// en un único historial global, sin perder los consejos ya vistos.
+function getGlobalHistory(saved) {
+  if (Array.isArray(saved.usedAdvices)) {
+    return saved.usedAdvices;
+  }
+
+  const oldHistory = saved.usedAdvices || {};
+  return [...new Set(Object.values(oldHistory).flatMap((items) =>
+    Array.isArray(items) ? items : []
+  ))];
+}
+
 export function getDailySelection() {
   const saved = readStore();
   return saved.date === getTodayKey() && saved.moodId && saved.advice
@@ -23,24 +36,21 @@ export function getDailySelection() {
     : null;
 }
 
-export function getUsedAdvices(moodId) {
-  const saved = readStore();
-  return saved.usedAdvices?.[moodId] || [];
+export function getUsedAdvices() {
+  return getGlobalHistory(readStore());
 }
 
 export function saveDailySelection(selection) {
   const previous = readStore();
-  const usedAdvices = previous.usedAdvices || {};
-  const moodHistory = usedAdvices[selection.moodId] || [];
+  const history = getGlobalHistory(previous);
 
   const record = {
     ...previous,
     ...selection,
     date: getTodayKey(),
-    usedAdvices: {
-      ...usedAdvices,
-      [selection.moodId]: [...moodHistory, selection.advice],
-    },
+    usedAdvices: history.includes(selection.advice)
+      ? history
+      : [...history, selection.advice],
   };
 
   localStorage.setItem(STORAGE_KEY, JSON.stringify(record));
